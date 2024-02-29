@@ -5,14 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f52fb33e-fad4-4a22-bda0-84e5e3557c08" name="Changes" comment="First commit.">
-      <change afterPath="$PROJECT_DIR$/src/main/java/BreadthFirstSearch.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/CISLinkedList.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/CISQueue.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/BreadthFirstSearchTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/CISQueueTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/CISQueueLinkedList.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/CISQueueLinkedListTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CISLinkedList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CISLinkedList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/CISQueue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/CISQueue.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +29,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 6
+}</component>
   <component name="ProjectId" id="2bf6jEJiwE2r1c0hQ4TyebckZOc" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
@@ -41,11 +40,19 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "JUnit.CISQueueTest.dequeue.executor": "Run",
+    "JUnit.CISQueueTest.executor": "Run",
+    "JUnit.CISQueueTest.isEmpty.executor": "Run",
+    "JUnit.CISQueueTest.size.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
-    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": ""
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "kotlin-language-version-configured": "true",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2"
   }
 }]]></component>
   <component name="RecentsManager">
@@ -57,38 +64,11 @@
     </key>
   </component>
   <component name="RunManager" selected="JUnit.CISQueueTest">
-    <configuration name="BreadthFirstSearch" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="BreadthFirstSearch" />
-      <module name="CS.12.03-Tutorial.2-Queues" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="BreadthFirstSearchTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="CS.12.03-Tutorial.2-Queues" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="BreadthFirstSearchTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="BreadthFirstSearchTest.bfs" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="CS.12.03-Tutorial.2-Queues" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="BreadthFirstSearchTest" />
-      <option name="METHOD_NAME" value="bfs" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="CISQueueLinkedListTest.dequeue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="CS.12.03-Tutorial.2-Queues" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="CISQueueLinkedListTest" />
-      <option name="METHOD_NAME" value="dequeue" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -102,15 +82,52 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="CISQueueTest.dequeue" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CS.12.03-Tutorial.2-Queues" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="CISQueueTest" />
+      <option name="METHOD_NAME" value="dequeue" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CISQueueTest.isEmpty" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CS.12.03-Tutorial.2-Queues" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="CISQueueTest" />
+      <option name="METHOD_NAME" value="isEmpty" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CISQueueTest.size" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="CS.12.03-Tutorial.2-Queues" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="CISQueueTest" />
+      <option name="METHOD_NAME" value="size" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.CISQueueTest" />
+        <item itemvalue="JUnit.CISQueueTest.size" />
+        <item itemvalue="JUnit.CISQueueTest.dequeue" />
+        <item itemvalue="JUnit.CISQueueTest.isEmpty" />
         <item itemvalue="JUnit.BreadthFirstSearchTest" />
-        <item itemvalue="JUnit.BreadthFirstSearchTest.bfs" />
-        <item itemvalue="Application.BreadthFirstSearch" />
-        <item itemvalue="JUnit.CISQueueLinkedListTest.dequeue" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-322ed176" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
