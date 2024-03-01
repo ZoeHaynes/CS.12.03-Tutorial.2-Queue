@@ -22,14 +22,16 @@ public class CISQueue<T> {
     // Returns an integer.
     // Indicates how many elements are currently in our Queue.
     public int size(){
-        int size = queue.size();
-        return size;
+        return queue.size();
     }
 
     // dequeue
     // Returns the data stored in the node that will be polled.
     public T dequeue(){
-        return queue.removeLast();
+        if (isEmpty()) {
+            throw new IllegalStateException("Queue is empty");
+        }
+        return queue.removeFirst();
     }
 
     // enqueue

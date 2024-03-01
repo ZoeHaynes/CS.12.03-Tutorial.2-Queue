@@ -50,10 +50,7 @@ public class CISLinkedList<T> {
     // isEmpty
     // returns whether the Singly Linked List is empty.
     public boolean isEmpty() {
-        if(size==0){
-            return true;
-        }
-        return false;
+        return size == 0;
     }
 
     // peekFirst
@@ -91,15 +88,14 @@ public class CISLinkedList<T> {
     // Adds a node to the back of the Singly Linked List.
     public void addLast(T value) {
         Node newNode = new Node(value);
-        if(head==null){
+        if(isEmpty()){
             head = newNode;
+            tail = newNode;
         }
-        Node curNode = head;
-        while(curNode.next != null){
-            curNode = curNode.next;
+        else {
+            tail.next = newNode;
+            tail = newNode;
         }
-        curNode.next = newNode;
-        tail = newNode;
         size++;
 
     }
@@ -141,18 +137,20 @@ public class CISLinkedList<T> {
     // Returns the data stored in the head node.
     // If the size of the Singly Linked List becomes 0, need to set the tail to null.
     public T removeFirst() {
-        if(head.next==null){
-            size--;
-            head = null;
-            return null;
+        if (isEmpty()) {
+            throw new IllegalArgumentException("Invalid index.");
         }
+
+        T data = (T) head.data;
         head = head.next;
         size--;
+
         if (size == 0) {
             tail = null;
-            head = null;
         }
-        return (T) head.data;
+
+        return data;
+
     }
 
     // removeLast
@@ -164,24 +162,19 @@ public class CISLinkedList<T> {
         if(isEmpty()){
             throw new RuntimeException("Is Empty");
         }
-        if(head.next==null){
+        if (size == 1) {
             head = null;
-            size--;
-            return null;
-        }
-        Node last = head;
-        int count = 0;
-        while(last.next!=tail) {
-            last = last.next;
-            count++;
-        }
-        last.next = null;
-        tail = last;
-        size--;
-        if(size==0){
             tail = null;
             return null;
+        } else {
+            Node<T> currentNode = head;
+            while (currentNode.next != tail) {
+                currentNode = currentNode.next;
+            }
+            tail = currentNode;
+            tail.next = null;
         }
+        size--;
         return (T) tail.data;
 
     }
